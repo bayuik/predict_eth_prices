@@ -33,4 +33,3 @@ Pada tahap ini, dilakukan pengecekan terhadap data yang hilang. Pada dataset ini
 Model yang digunakan adalah model Regresi Linear. Model ini digunakan karena dataset yang digunakan adalah dataset yang bersifat kontinyu. Selain itu, model ini juga digunakan karena dataset yang digunakan memiliki 1 variabel independen dan 1 variabel dependen. Model Regresi Linear dapat digunakan untuk memprediksi harga ETH di masa depan dengan tingkat akurasi yang lebih baik.
 
 ## Model Evaluation
-Model yang digunakan adalah model Regresi Linear. Model ini digunakan karena dataset yang digunakan adalah dataset yang bersifat kontinyu. Selain itu, model ini juga digunakan karena dataset yang digunakan memiliki 1 variabel independen dan 1 variabel dependen. Model Regresi Linear dapat digunakan untuk memprediksi harga ETH di masa depan dengan tingkat akurasi yang lebih baik.
