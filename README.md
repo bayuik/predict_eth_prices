@@ -1,3 +1,5 @@
+# Laporan Proyek Machine Learning - Bayu Indra Kusuma - Dicoding Submission Machine Learning Terapan
+
 # Domain Proyek
 Proyek ini berfokus pada pengembangan model Machine Learning untuk memprediksi harga Ethereum (ETH). Ethereum adalah sebuah cryptocurrency yang berada di urutan kedua berdasarkan kapitalisasi pasar di seluruh dunia. Seiring dengan peningkatan popularitas dan penggunaan cryptocurrency, banyak orang tertarik untuk berinvestasi dalam Ethereum atau cryptocurrency lainnya.
 
