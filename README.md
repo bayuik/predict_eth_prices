@@ -3,10 +3,13 @@
 # Domain Proyek
 Cryptocurrency adalah sebuah bentuk uang digital yang menggunakan teknologi kriptografi untuk mengamankan transaksi dan mengontrol penciptaan unit baru. Cryptocurrency berbeda dengan mata uang konvensional karena tidak terikat dengan negara atau lembaga keuangan tertentu. Sebaliknya, cryptocurrency dikelola melalui jaringan terdesentralisasi dan transaksi cryptocurrency dicatat pada blockchain.
 
+### Cara Kerja Cryptocurrency
 Setiap transaksi cryptocurrency dicatat pada blockchain, yang merupakan buku besar publik yang terdistribusi di seluruh jaringan. Setiap kali transaksi terjadi, node pada jaringan melakukan verifikasi untuk memastikan bahwa transaksi tersebut valid. Setelah transaksi terverifikasi, ia ditambahkan ke blockchain dan tidak dapat diubah lagi. Sebagai imbalannya, node yang melakukan verifikasi transaksi menerima imbalan dalam bentuk cryptocurrency.
 
+### Bagaimana Harga Cryptocurrency Ditentukan?
 Harga cryptocurrency ditentukan oleh kekuatan pasar dan permintaan. Semakin banyak orang yang ingin membeli cryptocurrency tertententu, semakin tinggi harga cryptocurrency tersebut. Harga cryptocurrency juga dipengaruhi oleh faktor-faktor seperti adopsi teknologi, regulasi pemerintah, dan isu-isu keamanan. Karena cryptocurrency masih relatif baru dan sangat fluktuatif, harga cryptocurrency dapat berubah dengan cepat dan sulit diprediksi.
 
+---
 Proyek ini berfokus pada pengembangan model Machine Learning untuk memprediksi harga Ethereum (ETH). Ethereum adalah sebuah cryptocurrency yang berada di urutan kedua berdasarkan kapitalisasi pasar di seluruh dunia. Seiring dengan peningkatan popularitas dan penggunaan cryptocurrency, banyak orang tertarik untuk berinvestasi dalam Ethereum atau cryptocurrency lainnya.
 
 Tujuan proyek ini adalah untuk membantu investor dan pedagang cryptocurrency dalam membuat keputusan investasi dengan lebih baik. Pada umumnya, harga cryptocurrency sangat fluktuatif dan sulit diprediksi. Oleh karena itu, penggunaan model Machine Learning dapat membantu memprediksi harga ETH di masa depan dengan tingkat akurasi yang lebih baik. Hal ini dapat membantu investor dalam membuat keputusan investasi yang lebih bijaksana dan menghindari kerugian.
@@ -49,6 +52,30 @@ Dataset ini berisi 6 kolom, yaitu:
 * Kelebihan dari LSTM adalah kemampuan untuk mengingat informasi jangka panjang dan kemampuan untuk menghindari vanishing gradient problem pada model dengan banyak lapisan. Selain itu, LSTM juga memiliki kemampuan untuk memodelkan hubungan antara masukan dan keluaran yang kompleks.
 * Kekurangan dari LSTM adalah kompleksitas yang lebih tinggi dibandingkan model yang lebih sederhana, sehingga memerlukan lebih banyak waktu untuk dilatih dan lebih sulit untuk diinterpretasikan.
 * Dalam proyek ini, tidak digunakan model lain selain LSTM untuk memprediksi harga Ethereum.
+
+## Model Architecture
+
+```
+model = Sequential([
+    LSTM(60, return_sequences=True),
+    LSTM(60),
+    Dense(30, activation="relu"),
+    Dropout(0.3),
+    Dense(10, activation="relu"),
+    Dropout(0.2),
+    Dense(1),
+])
+```
+Model yang digunakan terdiri dari beberapa lapisan yang diatur menggunakan parameter berikut:
+* LSTM(60, return_sequences=True): Layer pertama menggunakan LSTM dengan 60 unit neuron dan return_sequences=True untuk mengeluarkan urutan lengkap keluaran LSTM agar dapat dimasukkan ke layer berikutnya.
+* LSTM(60): Layer kedua menggunakan LSTM dengan 60 unit neuron untuk memproses keluaran dari layer sebelumnya.
+* Dense(30, activation="relu"): Layer ketiga menggunakan Dense layer dengan 30 unit neuron dan aktivasi ReLU.
+* Dropout(0.3): Layer keempat menggunakan Dropout layer dengan tingkat dropout 0.3 untuk mencegah overfitting.
+* Dense(10, activation="relu"): Layer kelima menggunakan Dense layer dengan 10 unit neuron dan aktivasi ReLU.
+* Dropout(0.2): Layer keenam menggunakan Dropout layer dengan tingkat dropout 0.2 untuk mencegah overfitting.
+* Dense(1): Layer terakhir menggunakan Dense layer dengan 1 unit neuron untuk menghasilkan prediksi harga Ethereum.
+Dengan arsitektur ini, model dapat mempertahankan informasi jangka panjang dan menghindari vanishing gradient problem, serta dapat memodelkan hubungan yang kompleks antara masukan dan keluaran. Selain itu, penggunaan dropout layer membantu mencegah overfitting pada data latih.
+
 # Evaluation
 * Metrik yang digunakan untuk mengukur performa model adalah Huber loss, mean absolute error (MAE), dan akurasi.
 * Huber loss dipilih karena metrik ini lebih kuat daripada mean squared error dalam menangani pencilan atau outlier pada data. Huber loss memungkinkan untuk memperlakukan data outlier secara berbeda dibandingkan dengan data reguler dalam proses pelatihan model.
