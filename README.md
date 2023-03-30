@@ -27,7 +27,6 @@ Dataset yang digunakan adalah Ethereum Historical Data. Dataset ini berisi data 
 ![Image](eth_price_chart.png)
 
 # Data Preparation
-## Data Cleaning
 * Pada tahap ini, dilakukan pengecekan terhadap data yang hilang. Pada dataset ini, tidak terdapat data yang hilang. 
 * Data yang dibaca dari file .csv kemudian diubah format tanggalnya menggunakan fungsi pd.to_datetime dengan format %b %d, %Y dan diubah menjadi format %Y-%m-%d.
 * Data yang diambil hanya kolom 'Date' dan 'Price'.
