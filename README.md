@@ -83,8 +83,10 @@ Dengan arsitektur ini, model dapat mempertahankan informasi jangka panjang dan m
 * Akurasi dipilih untuk mengevaluasi kinerja model, namun pada kasus ini akurasi memiliki makna yang lebih rendah dibandingkan dengan MAE atau Huber loss.
 
 ## Hasil Evaluasi
-* Model berhasil dilatih dengan baik dan mampu memprediksi harga Ethereum dengan tingkat kesalahan yang cukup rendah.
-* Model berhenti dilatih lebih awal karena telah mencapai target threshold MAE, sehingga proses pelatihan dapat dihentikan lebih cepat untuk menghemat waktu dan sumber daya.
+
+![Image](train_val_metrics.png)
+
+Model berhasil dilatih dengan baik dan mampu memprediksi harga Ethereum dengan tingkat kesalahan yang cukup rendah.
 
 ```
 Test Loss: 0.008534647524356842
